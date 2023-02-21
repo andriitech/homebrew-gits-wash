@@ -2,20 +2,16 @@
 #                https://rubydoc.brew.sh/Formula
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
 class GitSwash < Formula
-  desc ""
-  homepage ""
+  desc "git-swash makes switching between branches easier and guarantee you do not forger about your stash"
+  homepage "https://github.com/andriitech/git-swash"
   url "https://github.com/andriitech/git-swah/archive/refs/tags/v0.0.1.tar.gz"
   sha256 "0eae5ecb236a9609430256fa99b162b1e04b9258c4c6c986fcf8aa29e147232d"
-  license ""
+  license "MIT"
 
   # depends_on "cmake" => :build
 
   def install
-    # ENV.deparallelize  # if your formula fails when building in parallel
-    # Remove unrecognized options if warned by configure
-    # https://rubydoc.brew.sh/Formula.html#std_configure_args-instance_method
-    system "./configure", *std_configure_args, "--disable-silent-rules"
-    # system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    bin.install 'git-swash'
   end
 
   test do
